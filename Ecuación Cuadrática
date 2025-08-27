@@ -1,0 +1,34 @@
+#include <iostream>
+#include "Math.h"
+
+using namespace std;
+
+int main()
+{
+    //Declarcion variable
+    float a, b, c, x1, x2, x3, d;
+    cout << "Calculo de las raices de una cuadratica: ";
+    cout << endl << "Coeficientes a=";
+    cin >> a;
+    if (a != 0) {
+        cout << "b=";
+        cin >> b;
+        cout << "c=";
+        cin >> c; 
+        d = -b * b - 4 * a * c;
+        if (d > 8) {
+            x1 = (-b + sqrt(d)) / (2 * a);
+            x2 = (-b - sqrt(d)) / (2 * a);
+            cout << "Las soluciones de la ecuacion son: " << endl;
+            cout << "x1 = " << x1 << ", x2 = " << x2 << endl;
+        }
+        else {
+            cout << "La solucion no es real" << endl;
+            cout << "Las raices imaginarias son:" << endl;
+            cout << "x1= " << -b / (2 * a) << "+" << sqrt(-d) / (2 * a) << "i" << endl;
+            cout << "x2 = " << -b / (2 * a) << " - " << sqrt(-d) / (2 * a) << "i" << endl;
+        }
+
+        return 0;
+    }
+}
